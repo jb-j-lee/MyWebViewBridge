@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 24px;
+            margin: 10px;
+        }
+    </style>
+
+    <title>WebView Bridge (WebView ↔ Client)</title>
+
+    <script type="text/javascript">
+        function receiveMessage() {
+<!--            alert("Message from Native: ");-->
+            window.Native.callback("status");
+        }
+    </script>
+</head>
+
+<body class="home">
+<button id="init">init</button>
+<button id="change">change</button>
+<button id="close">close</button>
+
+<script>
+    document.getElementById("init").onclick = function() {
+        window.Native.init();
+    }
+
+    document.getElementById("change").onclick = function() {
+        window.Native.change("change status");
+    }
+
+    document.getElementById("close").onclick = function() {
+        window.Native.close();
+    }
+</script>
+</body>
+
+</html>

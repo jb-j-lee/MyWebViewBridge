@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 24px;
+            margin: 10px;
+        }
+    </style>
+
+    <title>WebView Bridge (WebView → Client)</title>
+</head>
+
+<body class="home">
+<button id="button1">No Message</button>
+<button id="button2">Plain Text Format Message</button>
+<button id="button3">Json Format Message</button>
+
+<script>
+    document.getElementById("button1").onclick = function() {
+        window.Native.messageAsEmpty();
+    }
+
+    document.getElementById("button2").onclick = function() {
+        var text = "Plain Text Format Message";
+        window.Native.messageAsText(text);
+    }
+
+    document.getElementById("button3").onclick = function() {
+        var jsonData = {
+            title : "Json Format Message",
+            description : "The bridge passed parameters in json format."
+        };
+
+        var jsonString = JSON.stringify(jsonData);
+        window.Native.messageAsJson(jsonString);
+    }
+</script>
+</body>
+
+</html>
