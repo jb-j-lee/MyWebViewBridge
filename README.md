@@ -22,6 +22,7 @@ WebView Bridge 에 대한 예제 입니다.
 # Language
 
 - [Kotlin](https://kotlinlang.org)
+- [Html with css]
 
 # JetPack [AAC(Android Architecture Components)](https://blog.naver.com/dev2jb/223230422126)
 
@@ -45,3 +46,12 @@ WebView Bridge 에 대한 예제 입니다.
 # Build Dependency
 
 - [version catalog](https://developer.android.com/build/migrate-to-catalogs)
+
+# Troubleshooting
+
+- Use JavaScript in WebView
+  - [webview.settings.javaScriptEnabled = true](https://developer.android.com/develop/ui/views/layout/webapps/webview?hl=en#UsingJavaScript)
+- Bind JavaScript code to Android code
+  - [@android.webkit.JavascriptInterface](https://developer.android.com/develop/ui/views/layout/webapps/webview?hl=en#BindingJavaScript)
+  - [webView.addJavascriptInterface](https://developer.android.com/develop/ui/views/layout/webapps/webview?hl=en#BindingJavaScript)
+- WebView Contents Size - Remove Scroll
