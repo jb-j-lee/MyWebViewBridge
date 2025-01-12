@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="arrays_menu" translatable="false">
+        <item>"Menu 1"</item>
+        <item>"Menu 2"</item>
+        <item>"Menu 3"</item>
+    </string-array>
+</resources>

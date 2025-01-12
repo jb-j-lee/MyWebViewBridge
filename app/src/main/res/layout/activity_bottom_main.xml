@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottomSheetActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toTopOf="@id/webview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/bottom_main"
+        app:title="@string/activity_title"
+        app:titleCentered="true" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include
+            android:id="@+id/bottom_sheet"
+            layout="@layout/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/webview">
+
+        <TextView
+            android:id="@+id/menu_media_rewind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="54dp"
+            android:paddingVertical="5dp"
+            android:text="@string/media_rewind"
+            android:textColor="@color/bottom_tint_selector"
+            app:drawableTint="@color/bottom_tint_selector"
+            app:drawableTopCompat="@android:drawable/ic_media_rew" />
+
+        <TextView
+            android:id="@+id/menu_media_previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="54dp"
+            android:paddingVertical="5dp"
+            android:text="@string/media_previous"
+            android:textColor="@color/bottom_tint_selector"
+            app:drawableTint="@color/bottom_tint_selector"
+            app:drawableTopCompat="@android:drawable/ic_media_previous" />
+
+        <TextView
+            android:id="@+id/menu_media_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="54dp"
+            android:paddingVertical="5dp"
+            android:text="@string/media_play"
+            android:textColor="@color/bottom_tint_selector"
+            app:drawableTint="@color/bottom_tint_selector"
+            app:drawableTopCompat="@android:drawable/ic_media_play" />
+
+        <TextView
+            android:id="@+id/menu_media_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="54dp"
+            android:paddingVertical="5dp"
+            android:text="@string/media_next"
+            android:textColor="@color/bottom_tint_selector"
+            app:drawableTint="@color/bottom_tint_selector"
+            app:drawableTopCompat="@android:drawable/ic_media_next" />
+
+        <TextView
+            android:id="@+id/menu_media_fast_forward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="54dp"
+            android:paddingVertical="5dp"
+            android:text="@string/media_fast_forward"
+            android:textColor="@color/bottom_tint_selector"
+            app:drawableTint="@color/bottom_tint_selector"
+            app:drawableTopCompat="@android:drawable/ic_media_ff" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

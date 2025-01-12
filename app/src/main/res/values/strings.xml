@@ -7,4 +7,15 @@
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="activity_title">"Bottom Sheet + WebView"</string>
+    <string name="bottom_sheet_title">"Bottom Sheet Title"</string>
+
+    <string name="close">"Close"</string>
+
+    <string name="media_rewind">"되감기"</string>
+    <string name="media_previous">"이전"</string>
+    <string name="media_play">"재생"</string>
+    <string name="media_next">"다음"</string>
+    <string name="media_fast_forward">"빨리 감기"</string>
 </resources>
